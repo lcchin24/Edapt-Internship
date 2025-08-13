@@ -1,0 +1,18 @@
+- input:
+    number1: "200"
+    number2: "50"
+    function: "number1 / number2 rounded to two decimals"
+  expected: "4.00"
+
+- input:
+    number1: "345.75"
+    number2: "129.5"
+    function: "(number1 + number2) / 2 rounded to two decimals"
+  expected: "237.63"
+
+- input:
+    number1: "Budget allocated was 1,200 units"
+    number2: "Baseline was 300"
+    function: "Take 1200 and divide it by 300. Round result to two decimals."
+  expected: "4.00"
+

@@ -1,0 +1,137 @@
+- input:
+    number1: "200"
+    number2: "50"
+    function: "number1 / number2 rounded to two decimals"
+  expected: "4.00"
+
+- input:
+    number1: "345.75"
+    number2: "129.5"
+    function: "(number1 + number2) / 2 rounded up to two decimals"
+  expected: "237.63"
+
+- input:
+    number1: "Budget allocated was 1,200 units"
+    number2: "Baseline was 300"
+    function: "Take 1200 and divide it by 300. Round result to two decimals."
+  expected: "4.00"
+  
+- input:
+    number1: The budget in Q1 was $1,500. In Q2, it increased to $1,800.
+    number2: Baseline value remains at $1,200
+    function: Calculate percent increase from Q1 to Q2. Round final ratio to two decimals
+  expected: '20.00'
+
+- input:
+    number1: "Data points: 3.5, 7.8, 9.2, 10.0"
+    number2: "Baseline average was 7.1"
+    function: "Compute average of data points, then subtract baseline. Round to 2 decimals."
+  expected: "0.53"
+
+- input:
+    number1: "Projected: 3000, Actual: 2500"
+    number2: "Expected: 2800"
+    function: "Find the percent difference between projected and actual. Then subtract difference from expected. Round result to nearest multiple of 100."
+  expected: "2800"
+
+- input:
+    number1: "N1 = 4.5, N2 = 6.7, N3 = 3.3"
+    number2: "Not relevant"
+    function: "Add all N values, divide by 3, then square the result. Round to 2 decimal places."
+  expected: "23.36"
+
+- input:
+    number1: "Initial: 9500, Final: 11200"
+    number2: "Growth threshold: 20%"
+    function: "Calculate % growth from Initial to Final, check if it exceeds threshold. Return True or False."
+  expected: "False"
+
+- input:
+    number1: "You had values of 5, 15, and 25 scattered across the paragraph."
+    number2: "Nothing else matters"
+    function: "Calculate the weighted average assuming weights 0.2, 0.3, 0.5 respectively. Round to 2 decimal places."
+  expected: "18.00"
+
+- input:
+    number1: "The first segment was 120 units, second 240 units, third 360 units."
+    number2: "Baseline segment average is 200"
+    function: "Average the three segments and subtract baseline. Round to 1 decimal place."
+  expected: "40.0"
+
+- input:
+    number1: "Revenue A: 10,000. Revenue B: 8,000. Revenue C: 9,000"
+    number2: "Target: 9,000"
+    function: "Average the revenues. Compare to target. Return 'Above', 'Below', or 'Equal'."
+  expected: "Equal"
+
+- input:
+    number1: "X = 3, Y = 4"
+    number2: "Z = 5"
+    function: "Verify if X^2 + Y^2 == Z^2. Return True or False."
+  expected: "True"
+
+- input:
+    number1: "Results: 7.6, 8.1, 6.9, and a typo like 'eight'"
+    number2: "Ignore non-numeric"
+    function: "Compute average of all valid numbers. Round to 1 decimal."
+  expected: "7.5"
+
+- input:
+    number1: "Survey results: 5.6, 7.3, 6.8, 8.1, and 6.5 were the satisfaction scores."
+    number2: "Previous year average was 6.0"
+    function: "Compute the average of the current year’s scores, then subtract the previous year's average. Round to 2 decimals."
+  expected: "0.86"
+
+- input:
+    number1: "Region A: 1200 units, Region B: 1350, Region C: 950"
+    number2: "Expected total target: 4000 units"
+    function: "Sum all region outputs and subtract the target. Round to nearest whole number."
+  expected: "-500"
+
+- input:
+    number1: "Q1 revenue = 5.1k, Q2 = 5.8k, Q3 = 6.0k, Q4 = 6.4k"
+    number2: "Baseline average was 5.0k"
+    function: "Average all four quarters, subtract baseline, then multiply result by 100. Round to nearest whole number. Do it without numpy"
+  expected: "83"
+
+- input:
+    number1: "Math scores: student A - 88, B - 91, C - 84, D - 90"
+    number2: "Weights: A - 1.0, B - 1.5, C - 1.2, D - 1.3"
+    function: "Compute weighted average using weights, round to nearest integer. Do it without numpy"
+  expected: "88"
+
+- input:
+    number1: "Allocated budgets: Dept1: $2000, Dept2: $3000, Dept3: $5000"
+    number2: "Each dept was supposed to get an equal share of $10000"
+    function: "Compute expected share per dept, then subtract actual allocation to find deviation for Dept3. Round to 2 decimals."
+  expected: "-1666.67"
+
+- input:
+    number1: "The dataset contains values: 2, 5, 8, 11, 14"
+    number2: "Ignore the smallest and largest values"
+    function: "Compute average of middle three values only. Round to 1 decimal."
+  expected: "8.0"
+
+- input:
+    number1: "This year: 780 people attended. Last year: 620."
+    number2: "Target growth was 20%"
+    function: "Calculate actual percent increase from last year to this year, then subtract target growth. Round to 1 decimal."
+  expected: "5.8"
+
+- input:
+    number1: "Monthly expenses: Jan: 950, Feb: 1020, Mar: 875"
+    number2: "April budget ceiling is 1000"
+    function: "Find the average of the first three months' expenses. Subtract April budget. Round to 1 decimal."
+  expected: "-51.7"
+
+- input:
+    number1: "Student scores: 95, 86, 92, 88, 100"
+    number2: "Only keep top 3 scores"
+    function: "Compute average of the top 3 scores. Round to 1 decimal. Return integer"
+  expected: "95"
+
+- input:
+    number1: "Initial value: 1200, increase: 300"
+    number2: "Then decreased by 10% of new value"
+    function: "Add increase, then subtract 10% of the result. Round to nearest whole number."
+  expected: "1350"

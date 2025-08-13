@@ -1,0 +1,19 @@
+# Environment variables
+.env
+key.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Large output files
+test_outputs*.txt
+test_outputs_*.txt
+test_outputs_*.*
+
+# OS files
+.DS_Store
+Thumbs.db

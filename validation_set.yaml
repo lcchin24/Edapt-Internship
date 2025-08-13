@@ -1,0 +1,18 @@
+- input:
+    number1: The budget in Q1 was $1,500. In Q2, it increased to $1,800.
+    number2: Baseline value remains at $1,200
+    function: Calculate percent increase from Q1 to Q2 and compare it to baseline. Round final ratio to two decimals.
+  expected: "1.25"
+
+- input:
+    number1: "Data points: 3.5, 7.8, 9.2, 10.0"
+    number2: "Baseline average was 7.1"
+    function: "Compute average of data points, then subtract baseline. Round to 2 decimals."
+  expected: "1.6"
+
+- input:
+    number1: "Projected: 3000, Actual: 2500"
+    number2: "Expected: 2800"
+    function: "Find the percent difference between projected and actual. Then subtract difference from expected. Round result to nearest whole number."
+  expected: "2700"
+
