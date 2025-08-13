@@ -9,10 +9,12 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Large output files
+# Large output files (but allow specific ones)
 test_outputs*.txt
 test_outputs_*.txt
 test_outputs_*.*
+!test_outputs_4.1_nano
+!test_outputs_4o_mini.txt
 
 # OS files
 .DS_Store
