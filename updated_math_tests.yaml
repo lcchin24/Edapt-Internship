@@ -1,0 +1,109 @@
+- input:
+    input_text: |
+      The quarterly financial overview was scattered with irrelevant details. 
+      Total funding across projects was finalized at 2,400,000 USD even though early drafts had typos like 23, 4567, and 89012 scattered around. 
+      Net revenue this time was reported at 600,000 after deducting all operating costs. 
+      A previous memo listed 650,000 but that was incorrect. 
+      This document also repeats random filler about compliance policies, schedules, and staff meetings to stretch the page length. 
+      The entire report is noisy, containing placeholders and dummy text beyond the financial highlights.
+    targets: ["total_funding", "net_revenue"]
+    function: "Compute the percent increase in net revenue compared to last year's value of 550,000."
+    expected: "9.09"
+
+- input:
+    input_text: |
+      Amid constant repetition of unrelated numbers like 888, 77, and 2025, the performance update stated 
+      that research funding amounted to 1,200,000 this quarter. 
+      Meanwhile, expenses across R&D and salaries reached 800,000. 
+      Net profit therefore was 400,000. 
+      The earlier draft contained different figures but those should be ignored. 
+      For context, the average net profit over the past two quarters was 300,000, making this a notable change. 
+      The noisy file continues with dummy sentences, placeholder addresses, and irrelevant digits.
+    targets: ["funding", "expenses", "net_profit"]
+    function: "Calculate the profit margin as (Net Profit / Funding) * 100."
+    expected: "33.33"
+
+- input:
+    input_text: |
+      In a jumbled presentation full of incorrect values like 12345 and 6789, the company report clarified that 
+      total revenue for the year stood at 5,000,000. 
+      Operating costs accounted for 3,200,000 and taxes were 400,000. 
+      The net income therefore was finalized at 1,400,000. 
+      Random filler continues: compliance updates, HR deadlines, holiday schedules, and arbitrary digits like 765 and 42. 
+      This content was mixed intentionally to obscure the real results.
+    targets: ["total_revenue", "operating_costs", "taxes", "net_income"]
+    function: "Verify net income by computing Total Revenue - Operating Costs - Taxes."
+    expected: "1,400,000"
+
+- input:
+    input_text: |
+      Between dozens of irrelevant mentions of 555, 999, and other noise, 
+      the update states that marketing spend was 500,000 while sales revenue generated 2,000,000. 
+      Administrative overhead added 200,000 to costs. 
+      The financial writer scattered text about product launches, staffing, and training milestones to fill space. 
+      Final profit margin, if calculated, would tell whether marketing was efficient this year.
+    targets: ["marketing_spend", "sales_revenue", "admin_overhead"]
+    function: "Compute profit after expenses as Sales Revenue - (Marketing Spend + Admin Overhead)."
+    expected: "1,300,000"
+
+- input:
+    input_text: |
+      The scattered annual review repeated words and dummy numbers such as 345, 987, and 2468. 
+      Real values included staff salaries totaling 1,000,000 and infrastructure costs of 500,000. 
+      Training budgets were another 250,000. 
+      Nothing else financial was meaningful in this noise-filled report. 
+      Analysts wanted the total operational expenses summed correctly.
+    targets: ["salaries", "infrastructure", "training"]
+    function: "Calculate total operational expenses as Salaries + Infrastructure + Training."
+    expected: "1,750,000"
+
+- input:
+    input_text: |
+      A memo filled with disclaimers, lorem text, and scattered digits like 333, 444, and 222 mentioned actual revenue streams. 
+      Product line A brought in 700,000 while line B brought in 900,000 and line C 1,400,000. 
+      Other references like 111 and 1234 should be ignored. 
+      Financial planners asked for the average revenue per product line to be calculated.
+    targets: ["line_A", "line_B", "line_C"]
+    function: "Compute average revenue as (Line A + Line B + Line C) / 3."
+    expected: "1,000,000"
+
+- input:
+    input_text: |
+      Text cluttered with unrelated IDs like 77, 888, and 9090 mentioned that 
+      total grants amounted to 3,000,000 and total expenditures for projects reached 2,100,000. 
+      An old note wrongly listed 2,500,000 as expenditures but that was revised. 
+      For clarity, calculate the remaining funds available to allocate.
+    targets: ["grants", "expenditures"]
+    function: "Compute remaining funds as Grants - Expenditures."
+    expected: "900,000"
+
+- input:
+    input_text: |
+      This internal review is padded with random information like employee IDs 101, 202, and 303. 
+      Still, it specifies that production costs were 1,500,000, distribution costs 700,000, 
+      and marketing costs 800,000. 
+      Random filler includes office renovations, birthdays, and training modules. 
+      Finance asked for total costs and then the cost per department on average.
+    targets: ["production", "distribution", "marketing"]
+    function: "Compute average per department as Production + Distribution + Marketing / 3."
+    expected: "1,000,000"
+
+- input:
+    input_text: |
+      Within lines describing HR updates, compliance alerts, and fake digits like 12, 34, and 5678, 
+      the authentic numbers were capital assets of 4,000,000 and liabilities of 2,500,000. 
+      Earlier notes mentioned 3,000,000 liabilities but this was revised. 
+      Calculate the equity from this balance sheet snapshot.
+    targets: ["assets", "liabilities"]
+    function: "Compute equity as Assets - Liabilities."
+    expected: "1,500,000"
+
+- input:
+    input_text: |
+      A verbose note scattered with lorem text and irrelevant codes like 88, 99, and 1001 indicated real values. 
+      Last quarter revenue was 2,200,000 and this quarter revenue was 2,750,000. 
+      Extra unrelated commentary repeated the word forecast multiple times. 
+      Analysts wanted to calculate the percent change across quarters.
+    targets: ["last_qtr", "this_qtr"]
+    function: "Compute percent change as (This Quarter - Last Quarter) / Last Quarter * 100."
+    expected: "25.00"
